@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía de estudio parcial: Evaluación Psicológica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edeff2;--card:#fff;--ink:#1d2533;--mute:#5d6877;--line:#cfd5dd;--acc:#2b4c7e;--hl:#c58a12;--ok:#2f7d52;--okbg:#e3f2ea;--bad:#b23a3a;--badbg:#f8e6e4;--side:#fff;
+--head:"Newsreader",Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161c;--card:#1a2029;--ink:#e5e9ef;--mute:#93a0b2;--line:#2b3440;--acc:#8fb4ea;--hl:#e0b04a;--ok:#72cf9a;--okbg:#18362a;--bad:#ee8d86;--badbg:#3a2220;--side:#161b23}}
+:root[data-theme="dark"]{--bg:#12161c;--card:#1a2029;--ink:#e5e9ef;--mute:#93a0b2;--line:#2b3440;--acc:#8fb4ea;--hl:#e0b04a;--ok:#72cf9a;--okbg:#18362a;--bad:#ee8d86;--badbg:#3a2220;--side:#161b23}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:10}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.hd{max-width:1040px;margin:0 auto;padding:12px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+h1{font:600 1.2rem/1.2 var(--head);margin:0}
+h1 small{display:block;font:600 .68rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--hl);margin-bottom:2px}
+.tools{display:flex;gap:8px;align-items:center}
+.sc{font:600 1.1rem var(--head);color:var(--acc);margin-right:6px}
+.sc small{font:500 .75rem var(--sans);color:var(--mute)}
+.tb{font:600 .8rem var(--sans);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.tb:hover{border-color:var(--acc);color:var(--acc)}
+.tb:disabled{opacity:.35;cursor:default}
+.bar{height:4px;background:var(--line)}.bar i{display:block;height:100%;width:0;background:var(--hl);transition:width .3s}
+.wrap{flex:1;max-width:820px;width:100%;margin:0 auto;padding:20px 18px 32px}
+.side{display:flex;flex-direction:column;gap:6px;align-self:start;position:sticky;top:14px}
+.side h2{font:600 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 4px}
+.mb{text-align:left;background:var(--side);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:6px;padding:8px 10px;cursor:pointer;color:var(--ink);font:500 .84rem/1.3 var(--sans)}
+.mb:hover{border-left-color:var(--hl)}
+.mb.on{border-left-color:var(--acc);background:var(--card);box-shadow:0 1px 0 var(--line)}
+.mb span{display:flex;justify-content:space-between;gap:8px;font-size:.72rem;color:var(--mute);margin-top:3px}
+.mb em{display:block;height:3px;background:var(--line);margin-top:5px;border-radius:2px;overflow:hidden}
+.mb em i{display:block;height:100%;background:var(--ok)}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(30px,1fr));gap:4px;margin-bottom:16px}
+.chips button{height:28px;padding:0;font:600 .8rem var(--sans);border:1px solid var(--line);background:var(--card);color:var(--mute);border-radius:6px;cursor:pointer}
+.chips .ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.chips .bad{background:var(--bad);border-color:var(--bad);color:#fff}
+.chips .cur{outline:2px solid var(--hl);outline-offset:1px}
+.notice{background:var(--okbg);border-left:4px solid var(--ok);padding:10px 14px;font-size:.88rem;margin-bottom:14px;border-radius:0 6px 6px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 22px}
+.num{font:600 .74rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--hl);margin-bottom:4px}
+.mn{font:500 .85rem var(--sans);color:var(--mute);margin-bottom:12px}
+.q{font:500 1.2rem/1.5 var(--head);margin:0 0 20px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;font:400 .95rem/1.45 var(--sans);color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:8px;padding:11px 14px;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt b{flex:none;width:28px;height:28px;border-radius:6px;background:var(--bg);display:grid;place-items:center;font:700 .8rem var(--sans);color:var(--acc)}
+.opt span{min-width:0;overflow-wrap:anywhere}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.bad{background:var(--badbg);border-color:var(--bad)}.opt.bad b{background:var(--bad);color:#fff}
+.fb{margin-top:18px;padding:14px 16px;border-radius:8px;font-size:.93rem;background:var(--bg)}
+.fb strong{display:block;font:600 1rem var(--head);margin-bottom:4px}
+.fb.ok strong{color:var(--ok)}.fb.bad strong{color:var(--bad)}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+.go{font:600 .9rem var(--sans);background:var(--acc);color:#fff;border:0;border-radius:6px;padding:10px 20px;cursor:pointer}
+:root[data-theme="dark"] .go{color:#12161c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .go{color:#12161c}}
+.res h2{font:600 1.5rem var(--head);margin:0 0 4px}
+.big{font:600 3rem/1 var(--head);color:var(--acc);margin:10px 0 4px}
+.res p{color:var(--mute);margin:0 0 14px}
+.row{display:grid;grid-template-columns:1fr 54px;gap:4px 10px;font-size:.87rem;margin-bottom:10px}
+.row div:nth-child(2){text-align:right;font-weight:600}
+.row em{grid-column:1/-1;display:block;height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.row em i{display:block;height:100%;background:var(--ok)}
+.miss{font-size:.9rem;margin:12px 0 18px;overflow-wrap:anywhere}
+footer{text-align:center;padding:16px 18px;font-size:.78rem;color:var(--mute);border-top:1px solid var(--line);background:var(--card)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;place-items:center;padding:20px;z-index:20}
+.modal.on{display:grid}
+.box{background:var(--card);border-radius:10px;padding:22px;max-width:360px;width:100%}
+.box p{margin:0 0 16px}.box div{display:flex;gap:8px;justify-content:flex-end}
+@media (max-width:760px){.wrap{grid-template-columns:1fr;gap:14px}.side{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}.side h2{display:none}.mb{min-width:158px;flex:none}.card{padding:18px 15px}.q{font-size:1.07rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <h1><small>Guía de estudio parcial:</small>Evaluación Psicológica</h1>
+    <div class="tools"><div class="sc" id="score"></div><button class="tb" id="resb" type="button">Resultados</button><button class="tb" id="theme" type="button">Modo oscuro</button><button class="tb" id="reset" type="button">Reiniciar</button></div>
+  </div>
+  <div class="bar"><i id="fill"></i></div>
+</header>
+<main class="wrap">
+  <div class="chips" id="chips"></div>
+  <div id="note"></div>
+  <div class="card" id="view"></div>
+</main>
+<footer>© A. A. Durand. Todos los derechos reservados</footer>
+<div class="modal" id="modal"><div class="box"><p>¿Seguro que quieres reiniciar? Se borrará todo tu avance guardado.</p><div><button class="tb" id="no" type="button">Cancelar</button><button class="go" id="yes" type="button">Reiniciar</button></div></div></div>
+<script>
+var MOD=["Introducción a la evaluación psicológica","Código ético: aplicado (casos)","Alfa de Cronbach","Escalas clinimétricas","Clasificación","Puntos de corte de las aplicadas","Instrumentos por patología","Evaluación infantil y del adolescente","Pruebas psicológicas"];
+// [pregunta, [correcta, errónea, errónea, errónea], retroalimentación]. 6 preguntas por módulo.
+var Q=[
+["En evaluación psicológica, ¿qué significa evaluar?",["Obtener, integrar e interpretar información para responder una pregunta","Aplicar una prueba y reportar su puntaje","Emitir un diagnóstico a partir de un instrumento","Elegir la prueba más conocida por el evaluador"],"Evaluar es obtener, integrar e interpretar información para responder una pregunta. No equivale a aplicar una prueba y exige razonamiento profesional."],
+["¿En qué momento del proceso de evaluación se selecciona la prueba?",["Después de definir el problema, no antes","Antes de la entrevista, para ahorrar tiempo","Al inicio, junto con la demanda de evaluación","Solo al final, para confirmar el diagnóstico"],"El proceso va de la demanda a la pregunta de evaluación y las hipótesis; después se seleccionan los métodos. La prueba se elige tras definir el problema."],
+["¿Qué es un checklist (lista de cotejo)?",["Una lista sistemática de indicadores para registrar presencia, frecuencia o conductas, sin implicar necesariamente normas ni diagnóstico","Una prueba psicométrica con normas y puntuaciones estandarizadas","Un instrumento que por sí solo establece un diagnóstico","Una prueba proyectiva de respuestas abiertas"],"El checklist es una herramienta de registro u observación. No necesariamente tiene normas, puntuaciones estandarizadas ni propiedades psicométricas complejas, y no diagnostica."],
+["¿Qué diferencia a la clinimetría de la psicometría?",["La clinimetría mide síntomas, severidad, funcionamiento y cambio clínico; la psicometría mide constructos como inteligencia o personalidad","La clinimetría mide inteligencia y la psicometría mide dolor y calidad de vida","No hay diferencia: son sinónimos","La psicometría se aplica solo a síntomas y la clinimetría solo a aptitudes"],"La psicometría mide constructos psicológicos; la clinimetría aplica la medición al contexto clínico (síntomas, severidad, calidad de vida, cambio clínico). Las otras opciones los invierten o los igualan."],
+["¿Cuál es una característica de las pruebas proyectivas?",["Estímulos ambiguos o poco estructurados, respuestas abiertas e interpretación clínica","Respuestas cerradas con puntuaciones estandarizadas y comparación normativa estricta","Reactivos dicotómicos calificados con una clave","Medición exclusiva de síntomas y su gravedad"],"Las proyectivas (TAT, CAT, HTP) usan estímulos ambiguos y respuestas abiertas. Las otras opciones describen pruebas psicométricas o escalas clinimétricas."],
+["¿Cómo es una entrevista psicológica semiestructurada?",["Tiene áreas o preguntas previamente definidas, pero permite profundizar según las respuestas","El entrevistador decide libremente todo el curso de la exploración","Sus preguntas y procedimientos son fijos y no admiten profundizar","No explora antecedentes ni funcionamiento actual"],"La semiestructurada combina áreas definidas con flexibilidad. La opción B describe la no estructurada y la C la estructurada."],
+["Una psicóloga aplica un instrumento solo traducido del inglés, sin datos de validez ni estandarización en población mexicana. Según el Código Ético, su proceder es:",["Inadecuado: no debe emplear instrumentos solo traducidos cuyos datos se obtuvieron en poblaciones diferentes (Art. 18)","Adecuado, porque una traducción garantiza la validez","Adecuado, siempre que informe el puntaje al paciente","Inadecuado únicamente si el paciente es menor de edad"],"El Art. 18 prohíbe usar técnicas solo traducidas, o con datos de construcción, validez y confiabilidad de poblaciones distintas a la evaluada. Traducir no garantiza validez."],
+["Se evaluará a una persona de un pueblo indígena de México. ¿Qué indica el Código Ético (Art. 19)?",["Emplear técnicas y normas elaboradas ex profeso o debidamente adaptadas, que consideren su contexto cultural","Aplicar las mismas pruebas estándar sin modificaciones","Evitar valorar a personas de esos pueblos","Traducir al español la prueba habitual y aplicarla"],"El Art. 19 exige técnicas y normas hechas ex profeso o adaptadas para esa población, tomando en cuenta su contexto cultural. Aplicar lo estándar o solo traducir no cumple."],
+["Un psicólogo permite que un estudiante aplique e interprete pruebas sin supervisión. ¿Cómo se valora?",["Inadecuado: no debe promover el uso de técnicas por personas no cualificadas; con estudiantes debe supervisar y asumir la responsabilidad (Art. 21)","Adecuado, pues los estudiantes ya conocen las pruebas","Adecuado si el estudiante firma el informe","Inadecuado solo si la prueba es proyectiva"],"El Art. 21 indica que, con estudiantes, el psicólogo supervisa adecuadamente y asume la responsabilidad de la aplicación, interpretación y uso. Sin supervisión es una falta."],
+["Un psicólogo toma decisiones con normas y resultados de una prueba de hace décadas, ya obsoletos. ¿Qué dice el Código?",["No debe basar decisiones o recomendaciones en datos, normas o resultados obsoletos para propósitos actuales (Art. 22)","Puede usarlos si la prueba es muy conocida","Puede usarlos si lo aclara en una nota al pie","Solo debe evitarlos en contextos forenses"],"El Art. 22 prohíbe fundamentar decisiones en datos, normas o resultados obsoletos o en pruebas construidas con otros propósitos, sin excepciones por popularidad ni por contexto."],
+["Una evaluación se hará por videollamada con un cuestionario automatizado. ¿Qué debe hacer el psicólogo (Art. 23)?",["Estar alerta a las limitaciones de la calificación e interpretación y comunicarlas, advertir los límites a la confidencialidad y ocultar la identidad de la persona","Omitir las limitaciones para no preocupar al evaluado","Asumir que la modalidad a distancia equivale a la presencial","Pedir al evaluado que califique e interprete por sí mismo"],"El Art. 23 pide comunicar las limitaciones de la evaluación a distancia, advertir los posibles límites a la confidencialidad y proteger la identidad de la persona valorada."],
+["Un psicólogo entrega a un familiar los reactivos, las claves y los resultados posibles de una prueba. ¿Qué establece el Código (Art. 27)?",["No debe dar a conocer contenidos, respuestas ni resultados posibles a no psicólogos, y debe mantener la integridad y seguridad de las pruebas","Es válido si el familiar solicitó la evaluación","Es válido si lo hace por escrito","Solo está prohibido con pruebas proyectivas"],"El Art. 27 obliga a mantener la integridad y seguridad de las pruebas y a no divulgar su contenido, respuestas o resultados posibles a no psicólogos, sea cual sea el tipo de prueba."],
+["El alfa de Cronbach es un indicador de:",["Consistencia interna, al examinar la relación entre los reactivos de una escala","Validez de contenido de una prueba","Sensibilidad para detectar casos","Estabilidad de los resultados en el tiempo (test–retest)"],"El alfa mide consistencia interna. La validez, la sensibilidad y el test–retest son otros conceptos distintos."],
+["Una escala obtiene α = .84. ¿Cómo se interpreta?",["Buena: alta consistencia interna y buena precisión de las puntuaciones","Baja, con mayor error de medición","Cuestionable: se interpreta con cautela","Muy alta, con posibles reactivos redundantes"],"El rango .80–.89 es bueno. Menos de .60 es bajo, .60–.69 cuestionable, .70–.79 aceptable y de .90 en adelante muy alto."],
+["Una escala obtiene α = .65. ¿Qué implica?",["Es cuestionable: consistencia interna limitada, interpretar con cautela","Es aceptable y suficiente en cualquier uso","Es buena, con alta precisión","Es excelente, pero con ítems redundantes"],"El rango .60–.69 es cuestionable: la precisión se reduce y los resultados se interpretan con cautela. Aceptable empieza en .70."],
+["Un instrumento tiene α ≥ .90. ¿Qué debe considerarse?",["Que la consistencia es muy alta, pero conviene revisar si los ítems son demasiado similares","Que es indudablemente válido","Que su consistencia interna es deficiente","Que no tiene error de medición"],"Un alfa de .90 o más indica alta precisión, pero puede deberse a reactivos redundantes. Tampoco prueba validez ni elimina el error de medición."],
+["Un instrumento tiene α = .55. ¿Cómo se interpreta?",["Baja: consistencia interna deficiente y mayor error de medición","Aceptable para investigación o exploración","Buena, con buena precisión","Cuestionable, con precisión reducida"],"Un alfa menor de .60 es baja y se asocia con mayor error de medición. Cuestionable corresponde a .60–.69."],
+["¿Un alfa de Cronbach alto demuestra por sí solo que el instrumento mide lo que pretende medir?",["No: el alfa informa sobre consistencia interna, pero no demuestra validez","Sí, porque a mayor alfa mayor validez","Sí, siempre que supere .70","Sí, pero solo en pruebas proyectivas"],"La validez requiere evidencia de contenido, procesos de respuesta, estructura interna, relación con otras variables y uso de las puntuaciones. El alfa solo cubre la consistencia."],
+["Un paciente obtiene un puntaje elevado en una escala clinimétrica. ¿Qué se concluye?",["Indica mayor gravedad o presencia de síntomas, pero no equivale a un diagnóstico automático","Que cumple con el diagnóstico correspondiente","Que ya no necesita entrevista clínica","Que la escala sustituye al juicio clínico"],"Clinimetría no es diagnóstico: un puntaje elevado no equivale a un diagnóstico automático, y la escala no sustituye la entrevista ni el juicio clínico."],
+["¿Cuál es una limitación de las escalas de autorreporte?",["Dependen de la comprensión lectora y la colaboración, y pueden estar influidas por sesgos de respuesta","Son lentas y difíciles de administrar","No permiten conocer la percepción del paciente","Impiden el seguimiento a lo largo del tiempo"],"El autorreporte es rápido, fácil de administrar y facilita el seguimiento y la percepción subjetiva. Sus límites son la comprensión lectora, la colaboración y los sesgos."],
+["¿Cuál es un objetivo de la evaluación clinimétrica?",["Establecer una línea base y monitorear cambios durante el tratamiento","Sustituir la entrevista clínica","Emitir diagnósticos sin otra información","Aplicar la mayor cantidad posible de escalas"],"Sirve para cuantificar síntomas, establecer una línea base y monitorear el cambio. Aplicar escalas indiscriminadamente es un error."],
+["¿Cuál es un error en la evaluación clinimétrica?",["Elegir una escala solo porque es fácil de encontrar","Establecer una línea base","Considerar el contexto cultural","Reaplicar la escala para detectar cambios"],"Entre los errores se cuentan elegir la escala por conveniencia, aplicarlas indiscriminadamente, ignorar el contexto cultural y no volver a usarlas."],
+["En el WHODAS 2.0, ¿cómo se interpreta la puntuación?",["De 0 a 100: a mayor puntuación, mayor discapacidad","De 0 a 100: a mayor puntuación, mejor funcionamiento","De 1 a 7: 7 indica muchísima mejoría","De 0 a 88: 61 o más indica sobrecarga grave"],"El WHODAS 2.0 evalúa funcionamiento; una mayor puntuación significa mayor discapacidad. El rango 0–88 es del Zarit y 1–7 de las escalas CGI."],
+["En la escala CGI-I (cambio clínico), ¿qué significa una puntuación de 7?",["Muchísimo peor","Muchísimo mejor","Normal","Sin cambios"],"En el CGI-I, 1 es muchísimo mejor y 7 muchísimo peor. En el CGI-S, 1 es normal y 7 corresponde a los pacientes más graves."],
+["Inventarios, escalas y pruebas de inteligencia o memoria son ejemplos de pruebas:",["Psicométricas","Proyectivas","Checklists de observación","Entrevistas semiestructuradas"],"Son estructuradas y estandarizadas, con puntuaciones cuantitativas y comparación con normas: características de las psicométricas."],
+["TAT, CAT, HTP, Dibujo de la Figura Humana y Dibujo de la Familia se clasifican como pruebas:",["Proyectivas","Psicométricas","Clinimétricas","Entrevistas estructuradas"],"Son proyectivas: estímulos poco estructurados, respuestas abiertas e interpretación clínica."],
+["¿Cuál es la diferencia central entre pruebas psicométricas y proyectivas?",["Las psicométricas son más estructuradas, con respuestas delimitadas; las proyectivas son más abiertas y de interpretación cualitativa","Las psicométricas usan estímulos ambiguos y las proyectivas puntuaciones normativas","No hay diferencia en su estructura","Las proyectivas siempre tienen normas más sólidas"],"Las psicométricas ponen énfasis en la medición y la comparación normativa; las proyectivas, en lo exploratorio e interpretativo. Las otras opciones invierten o niegan esa diferencia."],
+["El cuestionario CAGE se clasifica como un instrumento de:",["Tamizaje, para la identificación inicial de posibles casos","Diagnóstico definitivo de alcoholismo","Evaluación de la personalidad","Medición del funcionamiento global"],"El CAGE es una herramienta de tamizaje de consumo problemático de alcohol; no confirma un diagnóstico."],
+["Según Koppitz, los indicadores de desarrollo presentes entre el 51 y el 85% de los dibujos se llaman:",["Comunes","Mínimos","Frecuentes","Excepcionales"],"Mínimos: en más del 86%. Comunes: 51–85%. Frecuentes: 16–50%. Excepcionales: en menos del 15%."],
+["¿Cómo se clasifica una entrevista flexible en la que el entrevistador decide el curso de la exploración?",["No estructurada","Estructurada","Semiestructurada","Clinimétrica"],"La no estructurada es flexible y el entrevistador decide el curso. La semiestructurada tiene áreas definidas y la estructurada preguntas fijas, con mayor estandarización."],
+["Una persona obtiene 20 puntos en el BAI. ¿Qué nivel de ansiedad indica?",["Moderada (16–25)","Mínima (0–7)","Leve (8–15)","Grave (26–63)"],"BAI: 0–7 mínima, 8–15 leve, 16–25 moderada y 26–63 grave. Con 20 puntos la ansiedad es moderada."],
+["Una persona obtiene 25 en el BDI-II. ¿Qué severidad indica?",["Moderada (20–28)","Mínima (0–13)","Leve (14–19)","Grave (29–63)"],"BDI-II: 0–13 mínima, 14–19 leve, 20–28 moderada y 29–63 grave."],
+["En el cuestionario CAGE, un puntaje de 2 indica:",["Tamizaje positivo","Sin indicadores positivos","Señal de alerta","Dependencia grave confirmada"],"CAGE: 0 sin indicadores positivos, 1 señal de alerta y 2 o más tamizaje positivo. Es de tamizaje, no confirma dependencia."],
+["Un paciente obtiene 12 en la Escala de Desesperanza de Beck. ¿Cómo se interpreta?",["Desesperanza moderada (9–14)","Mínima (0–3)","Leve (4–8)","Severa (15–20)"],"BHS: 0–3 mínima, 4–8 leve, 9–14 moderada y 15–20 severa."],
+["Con 22 puntos en la Escala de Impulsividad de Plutchik se interpreta:",["Alta impulsividad (20–45)","Baja impulsividad (0–19)","Impulsividad moderada","No interpretable por los reactivos invertidos"],"EIP: de 0 a 19 baja impulsividad y de 20 a 45 alta. Los reactivos invertidos (4, 6, 11 y 15) se califican al revés, pero la escala sí se interpreta."],
+["¿Cuál es el rango total del BAI y del BDI-II?",["0 a 63 en ambos","0 a 21 en ambos","0 a 45 en ambos","0 a 20 en ambos"],"Ambos tienen 21 reactivos puntuados de 0 a 3, por lo que el total va de 0 a 63. El rango 0–45 es de la EIP y 0–20 de la BHS."],
+["¿Qué instrumento evalúa la gravedad de síntomas maníacos, con ≥20 como manía clínicamente significativa?",["YMRS","PHQ-9","GAD-7","PANSS"],"YMRS: gravedad de síntomas maníacos, con ≥20 clínicamente significativo. El PHQ-9 es de depresión, el GAD-7 de ansiedad y el PANSS de esquizofrenia."],
+["Una persona obtiene 16 en el AUDIT. ¿Qué indica?",["Consumo de alcohol de alto riesgo (≥15)","Bajo riesgo (0–7)","Consumo de riesgo (8–14)","Sin consumo problemático"],"AUDIT: 0–7 bajo riesgo, 8–14 riesgo y 15 o más alto riesgo."],
+["El Índice de Gravedad del Insomnio (ISI) con 18 puntos indica insomnio:",["Moderado (15–21)","Mínimo (0–7)","Subumbral (8–14)","Grave (22–28)"],"ISI: 0–7 mínimo, 8–14 subumbral, 15–21 moderado y 22–28 grave."],
+["¿Qué instrumento tamiza el deterioro cognitivo, con <26 como resultado sugestivo según la escolaridad?",["MoCA","MMSE","PID-5","WHOQOL-BREF"],"MoCA: <26 sugestivo. El MMSE mide estado cognitivo global con <24. El PID-5 evalúa rasgos de personalidad y el WHOQOL-BREF calidad de vida."],
+["El Y-BOCS mide la gravedad de obsesiones y compulsiones. ¿Qué rango corresponde a gravedad “grave”?",["24–31","8–15","16–23","32–40"],"Y-BOCS: 0–7 subclínico, 8–15 leve, 16–23 moderado, 24–31 grave y 32–40 extremo."],
+["¿Qué instrumento detecta síntomas de TDAH en adultos, con ≥4 como tamiz positivo?",["ASRS","Conners","SNAP-IV","CBCL"],"ASRS: ≥4 es tamiz positivo en adultos. El Conners usa T≥65 como elevado y el CBCL T≥65 y T≥70."],
+["¿Qué principio rige la evaluación psicológica infantil?",["El niño no es un “adulto pequeño”: la evaluación debe ser evolutiva, contextual y multimétodo","Basta con el autoinforme del niño","La conducta es estable e independiente del contexto","Los adultos no deben aportar información"],"La conducta infantil depende del contexto y la información proviene de múltiples informantes; por eso no basta el autoinforme."],
+["¿Cuáles son los tres niveles de información en la evaluación infantil?",["Niño, familia y escuela","Niño, médico y juez","Padres, abuelos y vecinos","Escuela, comunidad e institución"],"Se integra la información del niño (experiencia, conducta, emociones), de la familia (historia, desarrollo, dinámica) y de la escuela (rendimiento, relaciones)."],
+["“Se levantó de la silla 4 veces” es un ejemplo de:",["Descripción conductual","Interpretación clínica","Diagnóstico de TDAH","Hipótesis etiológica"],"Describir es registrar lo observable. Interpretar sería decir que presenta hiperactividad y diagnosticar, que tiene TDAH."],
+["Sobre el juego como técnica de evaluación, ¿qué precaución es correcta?",["No todo comportamiento en el juego representa conflicto, trauma, rasgo o trastorno: hay que observar, describir, formular hipótesis y corroborar","Toda conducta en el juego es evidencia diagnóstica","El juego no sirve como medio de comunicación","Basta una sesión de juego para confirmar un trastorno"],"El juego es una vía de comunicación y observación, pero sus hallazgos son hipótesis que deben corroborarse."],
+["El Inventario de Riesgo Suicida para adolescentes evalúa:",["Presencia, frecuencia e intensidad de la ideación suicida","Rasgos de personalidad según Cattell","Experiencias traumáticas y percepción de ellas","Afrontamiento mediante un dibujo"],"Es una prueba estructurada de ideación suicida. Los rasgos de Cattell son del HSPQ y las experiencias traumáticas, del Cuestionario de Sucesos de Vida."],
+["El HSPQ es:",["Una prueba estructurada de personalidad basada en la teoría factorial de Cattell, versión para adolescentes del 16PF","Una prueba grafo-proyectiva de Machover","Un inventario de riesgo suicida","Un cuestionario de sucesos de vida"],"El HSPQ es la versión para adolescentes del 16PF de Cattell. La Figura Humana de Machover es grafo-proyectiva."],
+["La técnica de Koppitz para el Dibujo de la Figura Humana evalúa:",["Nivel de desarrollo e indicadores emocionales","Solo inteligencia verbal","Únicamente rasgos de personalidad adulta","Aptitudes vocacionales"],"Koppitz validó el DFH en 1968 en dos áreas ajustadas a la edad: nivel de desarrollo e indicadores emocionales."],
+["En la calificación de Koppitz, ¿cómo se puntúan los ítems esperados?",["Presentes = 0; ausentes = −1","Presentes = +1; ausentes = 0","Presentes = +1; ausentes = −1","No se puntúan nunca"],"Los esperados presentes no se puntúan y ausentes restan 1. Los excepcionales solo suman +1 si están presentes. Después se agregan 5 puntos para evitar negativos."],
+["El CAT es un método proyectivo (aperceptivo), descendiente directo de:",["El TAT de Henry Murray","El HTP de Buck","El test de Corman","El HSPQ de Cattell"],"El CAT desciende del Test de Apercepción Temática (TAT) de Murray, versión para adultos."],
+["En la lámina 3 del CAT-A (león con pipa y bastón; ratón en un agujero), el león representa:",["La figura paterna, vista como poder benévolo o peligroso","La rivalidad fraterna","La escena primaria","El miedo a la oscuridad"],"El león es la figura paterna, y el ratón el conflicto dependencia–autonomía. La rivalidad fraterna se explora en la lámina 4."],
+["El Test del Dibujo de la Familia de Louis Corman evalúa:",["Dificultades de adaptación al medio familiar y la percepción que el niño tiene de su familia","Únicamente el coeficiente intelectual","Síntomas depresivos con puntos de corte","Riesgo suicida"],"Es una prueba proyectiva gráfica que explora emociones, adaptación familiar, conflictos edípicos y rivalidad fraterna."],
+["En el Dibujo de la Familia, según Corman, un dibujo ubicado en el sector izquierdo de la página se asocia con:",["El pasado y las tendencias regresivas","El futuro y las metas","Depresión y apatía","Expansión imaginativa"],"Izquierda: pasado y tendencias regresivas. Derecha: futuro y metas. Inferior: depresión y apatía. Superior: expansión imaginativa."]
+];
+// Letra en la que se muestra la respuesta correcta (0=A…3=D): reparto equilibrado, máximo dos iguales seguidas
+var TP=[1,3,0,2,2,0,3,1,3,1,2,0,0,2,1,3,1,0,3,2,3,2,0,1,2,1,0,3,0,3,2,1,1,2,3,0,3,0,1,2,2,3,1,0,0,1,3,2,3,1,0,2,2,0];
+var KEY="guia-evaluacion-v1",L=["A","B","C","D"],T=Q.length,PER=6,S;
+function ord(k){var r=[1,2,3];r.splice(TP[k],0,0);return r}
+function mod(k){return Math.floor(k/PER)}
+function done(k){return typeof S.ch[k]==="number"}
+function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function load(){try{var d=JSON.parse(localStorage.getItem(KEY));if(d&&Array.isArray(d.ch)&&typeof d.i==="number")return d}catch(e){}return null}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({i:S.i,ch:S.ch,res:S.res}))}catch(e){}}
+function stat(m){var a=0,o=0;for(var k=m*PER;k<m*PER+PER;k++){if(done(k)){a++;if(S.ch[k]===0)o++}}return{a:a,o:o}}
+function total(){var a=0,o=0;for(var k=0;k<T;k++)if(done(k)){a++;if(S.ch[k]===0)o++}return{a:a,o:o}}
+function go(k){S.i=k;S.res=false;save();render();window.scrollTo(0,0)}
+function head(){
+ var t=total();
+ document.getElementById("score").innerHTML=t.o+' <small>/ '+T+' aciertos</small>';
+ document.getElementById("fill").style.width=(t.a/T*100)+"%";
+ var c="";
+ for(var k2=0;k2<T;k2++){var cl=done(k2)?(S.ch[k2]===0?"ok":"bad"):"";if(!S.res&&k2===S.i)cl+=" cur";c+='<button type="button" class="'+cl+'" data-k="'+k2+'">'+(k2+1)+'</button>'}
+ var ch=document.getElementById("chips");ch.innerHTML=c;
+ var cb=ch.querySelectorAll("button");for(var y=0;y<cb.length;y++)cb[y].onclick=function(){go(+this.getAttribute("data-k"))};
+}
+function render(){
+ head();var v=document.getElementById("view");
+ if(S.res){results(v);return}
+ var q=Q[S.i],c=S.ch[S.i],od=ord(S.i),
+ x='<div class="num">Módulo '+(mod(S.i)+1)+': '+esc(MOD[mod(S.i)])+'</div><div class="num" style="margin-bottom:12px">Pregunta '+(S.i+1)+'</div><p class="q">'+esc(q[0])+'</p><div class="opts">';
+ for(var p=0;p<4;p++){var o=od[p],cl="";if(typeof c==="number"){if(o===0)cl=" ok";else if(o===c)cl=" bad"}
+  x+='<button class="opt'+cl+'" type="button" data-p="'+o+'"'+(typeof c==="number"?" disabled":"")+'><b>'+L[p]+'</b><span>'+esc(q[1][o])+'</span></button>'}
+ x+='</div><div id="fb"></div><div class="pn"><button class="tb" id="pv" type="button"'+(S.i===0?" disabled":"")+'>← Anterior</button><button class="go" id="nx" type="button">'+(S.i===T-1?"Ver resultados":"Siguiente →")+'</button></div>';
+ v.innerHTML=x;
+ document.getElementById("pv").onclick=function(){go(S.i-1)};
+ document.getElementById("nx").onclick=function(){if(S.i===T-1){S.res=true;save();render();window.scrollTo(0,0)}else go(S.i+1)};
+ var b=v.querySelectorAll(".opt");for(var z=0;z<b.length;z++)b[z].onclick=function(){pick(+this.getAttribute("data-p"))};
+ if(typeof c==="number")feedback(c);
+}
+function feedback(c){
+ var q=Q[S.i],ok=c===0;
+ document.getElementById("fb").innerHTML='<div class="fb '+(ok?"ok":"bad")+'"><strong>'+(ok?"Correcto":"Incorrecto — la respuesta correcta es la "+L[ord(S.i).indexOf(0)])+'</strong>'+esc(q[2])+'</div>';
+}
+function pick(p){
+ if(done(S.i))return;
+ S.ch[S.i]=p;save();render();
+ var f=document.getElementById("fb");if(f&&f.scrollIntoView)f.scrollIntoView({block:"nearest",behavior:"smooth"});
+}
+function results(v){
+ var t=total(),pc=Math.round(t.o/T*100),h='',pe=[],m;
+ for(var k=0;k<T;k++)if(!done(k))pe.push(k+1);
+ for(m=0;m<MOD.length;m++){var s=stat(m);h+='<div class="row"><div>'+(m+1)+'. '+esc(MOD[m])+'</div><div>'+s.o+'/'+PER+'</div><em><i style="width:'+(s.o/PER*100)+'%"></i></em></div>'}
+ var msg=pc>=90?"Dominas el tema.":pc>=70?"Buen nivel; repasa los módulos con menor puntaje.":"Conviene repasar los módulos con menor puntaje.";
+ v.innerHTML='<div class="res"><div class="num">Resultados</div><h2>'+t.o+' de '+T+' correctas</h2><div class="big">'+pc+'%</div><p>Calificación: '+(t.o/T*10).toFixed(1)+' / 10. '+msg+'</p>'+h+(pe.length?'<div class="miss"><strong>Sin responder ('+pe.length+'):</strong> '+pe.join(", ")+'</div><button class="go" id="back" type="button">Ir a la/las pregunta(s) pendiente(s)</button> ':'')+'<button class="tb" id="again" type="button">Intentar de nuevo</button></div>';
+ document.getElementById("again").onclick=restart;
+ var bk=document.getElementById("back");if(bk)bk.onclick=function(){go(pe[0]-1)};
+}
+function restart(){try{localStorage.removeItem(KEY)}catch(e){}S={i:0,ch:[],res:false};document.getElementById("note").innerHTML="";render();window.scrollTo(0,0)}
+function init(){
+ var d=load();
+ if(d&&d.i>=0&&d.i<T){S={i:d.i,ch:d.ch.slice(0,T),res:!!d.res};
+  var t=total();if(t.a>0)document.getElementById("note").innerHTML='<div class="notice">Retomaste tu avance: llevas '+t.a+' de '+T+' preguntas respondidas.</div>'}
+ else S={i:0,ch:[],res:false};
+ render();
+}
+var root=document.documentElement,tb=document.getElementById("theme");
+function dark(){var t=root.getAttribute("data-theme");return t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches}
+function setLabel(){tb.textContent=dark()?"Modo claro":"Modo oscuro"}
+try{var st=localStorage.getItem("guia-evaluacion-tema");if(st)root.setAttribute("data-theme",st)}catch(e){}
+setLabel();
+tb.onclick=function(){var t=dark()?"light":"dark";root.setAttribute("data-theme",t);try{localStorage.setItem("guia-evaluacion-tema",t)}catch(e){}setLabel()};
+document.getElementById("resb").onclick=function(){S.res=true;save();render();window.scrollTo(0,0)};
+var md=document.getElementById("modal");
+document.getElementById("reset").onclick=function(){md.classList.add("on")};
+document.getElementById("no").onclick=function(){md.classList.remove("on")};
+document.getElementById("yes").onclick=function(){md.classList.remove("on");restart()};
+init();
+</script>
+</body>
+</html>
